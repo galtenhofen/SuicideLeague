@@ -1,0 +1,67 @@
+﻿  <div class='week' > 
+    <table id='weekFilterTable' class='tableNoBorders' >
+                <thead id="topFilters">
+
+                    <tr id="topRow">
+                  <th><select selected = 'Week 5' id = 'selectWeek' class='form-control' [(ngModel)]='weekFilter' (change)="onSelectWeek($event.target.value)">
+                    <option value="" disabled>Choose Week </option>
+                    <option value="0">Overall</option>
+                    <option value="1">Week 1</option>
+                    <option value="2">Week 2</option>
+                    <option value="3">Week 3</option>
+                    <option value="4">Week 4</option>
+                    <option value="5">Week 5</option>
+                    <option value="6">Week 6</option>
+                    <option value="7">Week 7</option>
+                    <option value="8">Week 8</option>
+                    <option value="9">Week 9</option>
+                    <option value="10">Week 10</option>
+                    <option value="11">Week 11</option>
+                    <option value="12">Week 12</option>
+                    <option value="13">Week 13</option>
+                    <option value="14">Week 14</option>
+                    <option value="15">Week 15</option>
+                    <option value="16">Week 16</option>
+                    <option value="17">Week 17</option>
+                </select>  </th>
+                    </tr>
+
+</thead>
+</table>
+</div>
+
+<div class='tableContainer' >
+     <div class= 'panel-heading' *ngIf= 'loading && !errorMessage && (!users || users.length < 1)'>
+                      <h1 style='text-align:center'>Retrieving Leaderboard...</h1>
+                   </div>   
+               <div class= 'panel-heading' *ngIf='errorMessage'>
+                     <h1 style='text-align:center'> There was a problem retrieving Leaderboard.  Error Code: {{errorMessage}}</h1>
+                   </div>  
+               <!--<div class= 'panel-heading' *ngIf='(!players || players.length < 1) && !errorMessage && !loading'>
+                      There is no data for the chosen dates
+                   </div>-->  
+
+<div class='scrollingTable' *ngIf='users && (users.length>0) && !loading'> 
+    <table id='usersTable' resizeable mode="resizeMode" class='table table-hover table-condensed' >
+                <thead>
+    
+                    <tr>
+                        <th id="placeCol" >Place</th>
+                        <th id="userCol" >User</th>
+                        <th id="ptsCol" >Score</th>
+                        <th id="blkCol" ></th>
+                    </tr>
+                </thead> 
+<tbody>
+               <tr *ngFor="let user of users">
+                    <td id="placeCol" class="col-xs-1" style="text-align:center"><!--{{user.place}}--></td>   
+                    <td id="userCol" class="col-xs-1" style="text-align:center"><!--{{user.username}}--></td>
+                    <td id="ptsCol" class="col-xs-1" style="text-align:center"><!--{{user.score}}--></td>
+                    <td id="seeCol" class="col-xs-1" style="text-align:center"><button class='btn btn-success' (click)="onClickLoadTeam(user)">See Team</button></td>
+                 </tr> 
+               
+</tbody>
+               </table>
+              
+           </div> 
+</div>

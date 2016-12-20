@@ -1,0 +1,133 @@
+thead{
+    color: #337AB7;
+    border-color: transparent;
+}
+
+tbody{
+font-size: 16px;
+vertical-align: middle;
+
+}
+
+.fakeBody{
+ margin-top: 50px;
+}
+
+.btn-success{
+    line-height: 10px;
+width: 75px;
+}
+
+.tableContainer{
+ background-color: white; 
+ border:2px solid #d3d3d3;
+ border-radius: 5px;
+}
+
+.tableNoBorders{
+    border:none;
+}
+
+.filters{
+    border-color: transparent;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+#filterTable{
+  border-color: transparent;
+  border-bottom-color: transparent;
+  background-color: transparent;
+}
+
+#filterTable th{
+padding: 10px;
+}
+
+#topRow{
+    border-color: transparent;
+    box-sizing: unset;
+}
+/*
+.panel-heading{
+    width:100%;
+    border: none;
+    height: 60px;
+}
+
+
+.panel-primary{
+    border:none;
+}
+
+.panel-body{
+    width:100%;
+    border: none;
+}
+*/
+#playersTable{
+ /* table-layout: fixed;*/
+  /*   width:  60%;*/
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+li{
+    color: white
+}
+
+
+th{
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+    line-height: 40px;
+
+}
+
+td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+    max-height:30px; 
+}
+
+tr{
+    vertical-align: middle;
+    /*height: 15px;*/
+}
+
+
+tr#nameCol{
+    width: 20%
+}
+tr#teamCol{
+    width: 5%
+}
+tr#posCol{
+    width: 5%
+}
+tr#ptsCol{
+    width: 5%
+}
+tr#ttlCol{
+    width: 5%
+}
+tr#addCol{
+    width: 5%
+}
+.scrollingTable {
+            display: inline-block;
+            overflow-y: scroll;
+            max-height:600px;
+        }
+#showTakenBtn{
+  line-height: 20px;
+  width: 150px;
+}
+
+#hideTakenBtn{
+  line-height: 20px;
+  width: 150px;
+}

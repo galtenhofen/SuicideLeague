@@ -1,0 +1,257 @@
+.notPanel{
+    border:none;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0; 
+
+}
+
+.alsoNotPanel{
+    border:none;
+    height: 52px;
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0; 
+  text-align: center;
+
+}
+
+.loginMessage{
+  border: none;
+    margin-right: auto;
+    margin-left: auto;
+} 
+.loginButtons{
+  border: none;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    width: 100%;
+} 
+
+
+/*#background {
+    width: 100%; 
+    height: 100%; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 0;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+.panel-body{
+    height:1920px;
+    min-height: 100%;
+ }
+*/
+ .fullScreen{
+   background: transparent;
+  width:100%;
+  height:100%;
+}
+
+.leftPanel{
+    width: 53%;
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 30px;
+    border: none;
+} 
+
+.rightPanel{
+   width: 42%;
+   float: right;
+   margin: 0 10px 0 0;
+   padding: 0 30px 0 0;
+   border: none;
+}
+
+.weekPanel{
+  vertical-align: bottom;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  background: white;
+  width: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 75px;
+  margin-bottom: -65px;
+  border-radius: 6px;
+  border-style:solid;
+    border-color:#d3d3d3;
+    border-width:2px;
+
+  
+}
+
+/*#rowspace{
+    height:50px;
+}*/
+
+.middlePanel{
+    width: 35%;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+.profilePanel{
+    width: 20%;
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+} 
+
+  /*
+#background {
+    width: 100%; 
+    height: 100%; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 0;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}*/
+
+.tabrow {
+  text-align: center;
+  vertical-align: bottom;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+
+}
+.tabrow li {
+  margin: 0 10px;
+  padding: 0 10px;
+  /*border: 1px solid #AAA;*/
+  background: grey;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+    cursor:pointer;
+}
+/*
+.tabrow li.selected {
+  background: #FFF;
+  color: #000;
+  font-weight: bold;
+}*/
+
+.tabrow {
+  position: relative;
+  vertical-align: bottom;
+}
+.tabrow:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /*border-bottom: 1px solid #AAA;*/
+  z-index: 1;
+}
+
+.tabrow:before {
+  z-index: 1;
+}
+.tabrow li {
+    position: relative;
+  z-index: 0;
+}
+.tabrow li.selected {
+  z-index: 2;
+
+}
+
+.tabrow li:before,
+.tabrow li:after {
+  position: absolute;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  content: " ";
+}
+.tabrow li:before {
+  left: -6px;
+}
+.tabrow li:after {
+  right: -6px;
+}/*
+.tabrow li:after, .tabrow li:before {
+  border: 1px solid #AAA;
+}*/
+
+.tabrow li {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/*
+.tabrow li:before {
+  border-bottom-right-radius: 6px;
+  border-width: 0 1px 1px 0;
+}
+.tabrow li:after {
+  border-bottom-left-radius: 6px;
+  border-width: 0 0 1px 1px;
+}
+
+
+.tabrow li:before {
+  box-shadow: 2px 2px 0 red;
+}
+.tabrow li:after {
+  box-shadow: -2px 2px 0 red;
+}
+
+.tabrow li:before {
+  box-shadow: 2px 2px 0 #ECECEC;
+}
+.tabrow li:after {
+  box-shadow: -2px 2px 0 #ECECEC;
+}
+.tabrow li.selected:before {
+  box-shadow: 2px 2px 0 #FFF;
+}
+.tabrow li.selected:after {
+  box-shadow: -2px 2px 0 #FFF;
+}*/
+
+.tabrow li {
+  background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+  text-shadow: 0 1px #FFF;
+  margin: 0 -5px;
+  padding: 0 20px;
+}
+/*
+.my-class{
+  background: #FFF;
+  color: #000;
+  font-weight: bold;
+}*/
+
+.nolight-class {
+  color: #000 !important;
+  font-weight: normal !important;
+  font-size: 20px !important;
+}
+
+.highlight-class {
+  background: white !important;
+  color:#000 !important;
+  font-weight: bold !important;
+  /*font-size: 30px !important;*/
+}
+

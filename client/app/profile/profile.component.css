@@ -1,0 +1,17 @@
+.profileContainer{
+    margin-top: 10px;
+    border:2px solid #d3d3d3;
+    border-radius: 5px;
+ background-color: white; 
+}
+
+#profileTable{
+    margin-top: 10px;
+    border:none;
+     border-color: transparent;
+}
+
+tr{
+     border:none;
+     border-color: transparent;
+}

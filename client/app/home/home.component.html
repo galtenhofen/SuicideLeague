@@ -1,0 +1,94 @@
+﻿<div class='fullScreen'>
+<div class='notPanel'>
+    <div  class='alsoNotPanel'>
+
+          <ul class="tabrow">
+                <!-- <li><button class = "tabBtn" id="HomeBtn" type="button" (click)="updateView('Home')">Home</button></li>
+                <li><button class = "tabBtn" id="CreateBtn" type="button" (click)="updateView('Create')">Create Team</button></li>
+                  <li><button class = "tabBtn" id="ResultsBtn" type="button" (click)="updateView('Results')">Results</button></li>
+                  <li><button class = "tabBtn" id="LeaderboardBtn" type="button" (click)="updateView('Leaderboard')">Leaderboard</button></li>
+                 -->
+                
+                <li [ngClass]="highlightHome" (click)="updateHome()" *ngIf="auth.authenticated()">Home</li>
+                <li [ngClass]="highlightCreate" (click)="updateCreate()" *ngIf="auth.authenticated()">Create Team</li>
+                  <li [ngClass]="highlightResults"  (click)="updateResults()"*ngIf="auth.authenticated()">Results</li>
+                  <li [ngClass]="highlightLeader"  (click)="updateLeaderboard()"*ngIf="auth.authenticated()">Leaderboard</li>
+                  <li [ngClass]="highlightProfile"  (click)="updateProfile()"*ngIf="auth.authenticated()">Profile</li>
+                  <li (click)="auth.logout();updateHome()" *ngIf="auth.authenticated()">Log Out</li>
+                  <li (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</li>
+                  
+          </ul>
+
+                  <div class = 'loginMessage'>
+                <!-- <h4 *ngIf="auth.authenticated()">You're logged in, bro</h4>-->
+                 <h4 *ngIf="!auth.authenticated()">You are not logged in, please click 'Log in' button to login</h4>
+                </div>
+ <!--
+ <div class='loginButtons'>
+      <button class="btn btn-primary" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+      <button class="btn btn-primary" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+    </div>
+-->
+
+    </div>
+     
+</div>
+
+
+
+ <div class='mainDiv' *ngIf="viewController == 'Create'">
+ <div class='leftPanel'>
+         <player-app></player-app>
+ </div>
+
+  <div class='rightPanel'>
+            <!--<div id='rowspace' class='row'></div>-->
+              <div class='weekPanel'>
+            WEEK {{currentWeek}}
+                </div>  
+        <nfl-squad></nfl-squad>
+        </div> 
+      <br style="clear:both;"/>
+</div> 
+
+ <div class='mainDiv' *ngIf="viewController == 'Results'">
+ 
+ <div class='middlePanel' align='center'>
+
+         <nfl-entry></nfl-entry>
+
+ </div>
+
+ 
+</div> 
+
+ <div class='mainDiv' *ngIf="viewController == 'Profile'">
+ 
+ <div class='profilePanel' align='center'>
+
+         <nfl-profile></nfl-profile>
+
+ </div>
+
+ 
+</div> 
+
+ <div class='mainDiv' *ngIf="viewController == 'Leader'">
+ 
+ <div class='leftPanel'>
+         <nfl-leaderboard></nfl-leaderboard>
+ </div>
+
+  <div class='rightPanel'>
+            <!--<div id='rowspace' class='row'></div>-->
+              <div class='weekPanel'>
+          <!--  WEEK {{currentWeek}}-->
+                </div>  
+        <nfl-squad></nfl-squad>
+        </div> 
+      <br style="clear:both;"/>
+
+ 
+</div> 
+
+ </div>

@@ -1,0 +1,183 @@
+.notPanel{
+    border:none;
+    background: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0; 
+
+}
+
+.alsoNotPanel{
+    border:none;
+    height: 52px;
+    background: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0; 
+
+
+}
+
+.panel-body{
+    height:1920px;
+    min-height: 100%;
+ }
+
+ .mainDiv{
+  width:100%;
+  height:100%;
+}
+
+  
+#background {
+    width: 100%; 
+    height: 100%; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 0;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+.tabrow {
+  text-align: center;
+  vertical-align: bottom;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+}
+.tabrow li {
+  margin: 0 10px;
+  padding: 0 10px;
+  /*border: 1px solid #AAA;*/
+ background: grey;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: normal;
+    cursor:pointer;
+}
+
+.tabrow li.selected {
+  background: #FFF;
+  color: #000;
+  font-weight: bold;
+}
+
+.tabrow {
+  position: relative;
+  vertical-align: bottom;
+}
+.tabrow:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  /*border-bottom: 1px solid #AAA;*/
+  z-index: 1;
+}
+
+.tabrow:before {
+  z-index: 1;
+}
+.tabrow li {
+    position: relative;
+  z-index: 0;
+}
+.tabrow li.selected {
+  z-index: 2;
+  /*border-bottom-color: #FFF;*/
+}
+
+.tabrow li:before,
+.tabrow li:after {
+  position: absolute;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  content: " ";
+}
+.tabrow li:before {
+  left: -6px;
+}
+.tabrow li:after {
+  right: -6px;
+}/*
+.tabrow li:after, .tabrow li:before {
+  border: 1px solid #AAA;
+}*/
+
+.tabrow li {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.tabrow li {
+  background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+  text-shadow: 0 1px #FFF;
+  margin: 0 -5px;
+  padding: 0 20px;
+}
+
+thead{
+    color: #337AB7;
+    border-color: transparent;
+}
+
+tbody{
+font-size: 16px;
+vertical-align: middle;
+
+}
+
+.tableContainer{
+ background-color: white; 
+ border:2px solid #d3d3d3;
+ border-radius: 5px;
+}
+
+.tableNoBorders{
+    border:none;
+}
+
+th{
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+    line-height: 40px;
+
+}
+
+td{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+    max-height:30px; 
+}
+
+tr{
+    vertical-align: middle;
+    /*height: 15px;*/
+}
+
+tr#nameCol{
+    width: 20%
+}
+tr#teamCol{
+    width: 5%
+}
+tr#posCol{
+    width: 5%
+}
+
+.scrollingTable {
+            display: inline-block;
+            overflow-y: scroll;
+            max-height:600px;
+        }
